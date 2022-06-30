@@ -58,7 +58,7 @@
         <div class="row align-items-stretch">
             <div class="col bg-white p-5 rounded-end">
                 <h2 style="color: linear-gradient(0deg, rgba(8, 32, 50, 0.9), rgba(8, 32, 50, 0.9))" class="fw-bold text-center py-5">Eliminar persona por Rut</h2>
-                <form action="/eliminar/" method="POST">
+                <form action="/eliminar_personas/" method="POST">{% csrf_token %}
                     <input type="text" class="form-control" placeholder="12345678-k" id="txt_eliminar" name="txt_eliminar" required><br>    
                     <input style="font-size: 20px;" type="submit" class="btn btn-primary" value="Eliminar">
                 </form>

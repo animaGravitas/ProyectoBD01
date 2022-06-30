@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from tomlkit import value
 from app_gestion.models import Persona
@@ -34,4 +35,20 @@ def registrar_personas(request):
         rut=rut, nombre=nombre, appaterno=appaterno, apmaterno=apmaterno,
         edad=edad, vacuna=vacuna)
     return redirect('/home/')
+
+def eliminar_personas(request):   
+    if request.POST['txt_eliminar']:
+        rut_recibido = request.POST['txt_eliminar']
+        persona = Persona.objects.filter(rut=rut_recibido)
+        if persona:
+            per=Persona.objects.get(rut=rut_recibido)
+            per.delete()
+            mensaje = "Persona eliminada"
+        else:
+            mensaje = "Persona no eliminada; no existe" 
+    else:
+        mensaje = "Debe ingresar el rut para eliminar"    
+    return HttpResponse(mensaje)        
+
+     
     
