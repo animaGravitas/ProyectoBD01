@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href='{% static "app_gestion/css/stylesGestion.css" %}'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Telugu:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <!--Color de fondo-->
+    <style>
+        body{background: linear-gradient(0deg, rgba(8, 32, 50, 0.9), rgba(8, 32, 50, 0.9))}
+    </style>
+
+    <!--NAV-->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:  #042c3c">
+        <div class="container">
+            <a href="/gestion/" class="navbar-brand">
+                <img src='{% static "app_gestion/img/volver.png" %}' alt="" width="70" class="d-inline-block align-text-center">
+            </a>
+            <button class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto"> 
+                    <li class="nav-item"><br>
+                        <p>Gestión de registros</p>
+                    </li>
+                </ul>
+            </div>      
+        </div>
+    </nav>
+
+    <!--Eliminar-->  
+    <div class="container w-75 bg-primary mt-5 rounded shadow">
+        <div class="row align-items-stretch">
+            <div class="col bg-white p-5 rounded-end">
+                <h2 style="color: linear-gradient(0deg, rgba(8, 32, 50, 0.9), rgba(8, 32, 50, 0.9))" class="fw-bold text-center py-5">Eliminar persona por Rut</h2>
+                <form action="/eliminar/" method="POST">
+                    <input type="text" class="form-control" placeholder="12345678-k" id="txt_eliminar" name="txt_eliminar" required><br>    
+                    <input style="font-size: 20px;" type="submit" class="btn btn-primary" value="Eliminar">
+                </form>
+            </div>
+        </div>
+    </div>   
+
+    <!--FOOTER-->
+    <footer> <br><br>
+        <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h4 style="color: white;">Vacunación covid-19 | Región del Maule</h4>
+            </div>
+        </div>
+        </div> <br>
+        <div class="col-md-12 col-lg-12">
+        <div class="text-center text-md-right">
+            <ul class="list-untyled list-inline">
+            <li class="list-inline-item">
+                <a href="https://www.facebook.com/ministeriosaludchile?fref=ts" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://twitter.com/ministeriosalud" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://www.instagram.com/ministeriosalud/" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://www.youtube.com/user/ministeriosaludchile" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
+            </li>
+            </ul>
+        </div>
+        </div>
+        <div style="color: #fff;
+                    text-align: center;
+                    font-family: 'Merriweather', serif;">
+            <h6>Telefono de contacto: (+56 2) 2 5740 100</h6>
+            <h6>Correo: minsal@mevacuno.cl</h6>
+        </div>
+        <hr class="mb-4">
+        <div class="footer-bottom text-center">
+            <p class="mb-0" style="color: #97a5b5;">Dirección: 1 Ote. 940, Talca, Maule</p>
+        </div>
+    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

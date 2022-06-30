@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href='{% static "app_gestion/css/stylesHome.css" %}'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Telugu:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src='{% static "app_gestion/js/valRegistro.js" %}'></script>
+
+    <script>
+        function limpiar()
+        {
+          formulario.reset()
+          return false
+        }
+    </script>
+</head>
+<body>
+    
+    <!--Color de fondo-->
+    <style>
+        body{background-color: #d4ecf4;}
+    </style>
+
+    <!--NAV-->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color:  #042c3c">
+        <div class="container">
+          <a class="navbar-brand" id="logoMain">
+            <img src='{% static "app_gestion/img/icono.png" %}' alt="" width="70" class="d-inline-block align-text-center">
+          </a>
+          <button class="navbar-toggler" 
+                  type="button" 
+                  data-bs-toggle="collapse" 
+                  data-bs-target="#navbarSupportedContent" 
+                  aria-controls="navbarSupportedContent" 
+                  aria-expanded="false" 
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto"> 
+              <li class="nav-item">
+                <a style="color: #d4ecf4" class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a style="color: #d4ecf4" class="nav-link active" aria-current="page" href="#Calendario">Calendario</a>
+              </li>
+              <li class="nav-item">
+                <a style="color: #d4ecf4" class="nav-link active" aria-current="page" href="#Informacion">Información vacunas</a>
+              </li>
+              <li class="nav-item">
+                <a style="color: #d4ecf4" class="nav-link active" aria-current="page" href="#Preguntas">Preguntas y respuestas</a>
+              </li>
+            </ul>
+            <a class="navbar-brand" href="/gestion/" style="text-align: center;"> Gestión
+              <img src='{% static "app_gestion/img/logoSesion.png" %}' alt="" width="56" class="d-inline-block align-text-center">                                                                       
+            </a>
+            <a data-bs-toggle="modal" data-bs-target="#ModalRegistro" class="navbar-brand" href="" style="text-align: center;"> Registro
+              <img src='{% static "app_gestion/img/registro.png" %}' alt="" width="90" class="d-inline-block align-text-center">                                                                       
+            </a>
+        </div>
+    </nav>
+
+    <br><br><br>
+
+    <!--Imágen inicio-->
+    <div class="ImagenVac mx-auto">
+        <img src='{% static "app_gestion/img/inicioVac.jpg" %}' alt="">
+    </div>
+    
+    <br><br id="Calendario"><br><br><br>
+
+    <!--Calendario-->
+    <div class="TituloIn" >
+        <h1>
+          Calendario vacunación
+        </h1>
+      </div>
+      <section>
+        <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-lg-5 py-5">
+                  <div class="row">
+                      <div class="col-12">
+                          <div class="info-box">
+                              <div class="Texto"><br>
+                                  <p>
+                                    Calendario de vacunación masiva contra COVID-19 para la región del Maule 
+                                  </p>
+                              </div>
+                          </div>
+                      </div>
+              </div> <br><br>
+              <div class="calendario01 mx-auto">
+                <img src='{% static "app_gestion/img/calendario01.png" %}' width="540" alt="">
+              </div> <br><br>
+              <div class="calendario01 mx-auto">
+                <img src='{% static "app_gestion/img/calendario02.png" %}' width="540" alt="">
+              </div> <br><br>
+              <div class="calendario01 mx-auto">
+                <img src='{% static "app_gestion/img/calendario03.png" %}' width="540" alt="">
+              </div>
+          </div>
+        </div>
+      </section> <br id="Informacion"><br><br><br><br><br>
+
+     
+    <!--Información-->
+    <div class="TituloIn" >
+      <h1>
+        Vacunación covid-19
+      </h1>
+    </div>
+    <section>
+      <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 py-5">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="info-box">
+                            <div class="Texto"><br>
+                                <p>
+                                  El Instituto de Salud Pública (ISP), junto a un comité de expertos compuesto por profesionales reconocidos en el área de la salud, autorizó las siguientes vacunas para proteger a la población del país contra el Coronavirus (covid-19): <br><br><br><br>
+                                  16 de diciembre de 2020: vacuna Pfizer-BioNTech. <br><br>
+                                  20 de enero de 2021: vacuna CoronaVac del laboratorio Sinovac Life Sciences Co. <br><br>
+                                  27 de enero de 2021: vacuna AZD1222 desarrollada por el laboratorio AstraZeneca junto a la Universidad de Oxford. <br><br>
+                                  7 de abril de 2021: vacuna CanSino de origen chino/canadiense. <br><br>
+                                  10 de junio de 2021: vacuna Janssen Pharmaceuticals Companies de Johnson & Johnson. <br><br>
+                                  21 de julio de 2021: vacuna SPUTNIK V del laboratorio Gamaleya. <br><br>
+                                  2 de febrero de 2022: vacuna mRNA 1273 del laboratorio Moderna (también conocida como Spikevax). <br><br><br><br>
+                                  En Chile se encuentran disponibles las vacunas Pfizer-BioNTech, CoronaVac, AstraZeneca y Moderna. <br><br>
+                                  El Instituto de Salud Pública (ISP) autorizó el uso de emergencia de la vacuna CoronaVac a partir de los tres años, desde los cinco años para la vacuna Pfizer-BioNTech, y a partir de los seis años para la vacuna Moderna Spikevax mRNA-1273. <br><br>
+                                  Las vacunas recibidas en el extranjero se deben validar a través del sitio web <a href="https://mevacuno.gob.cl/">mevacuno.gob.cl</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div> <br><br>
+        </div>
+      </div>
+    </section> <br id="Preguntas"><br><br><br><br><br>
+
+    <!--Preguntas-->
+    <div class="TituloIn" >
+      <h1>
+        Preguntas y respuestas
+      </h1>
+    </div>
+    <section>
+      <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 py-5">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="info-box">
+                            <div class="Texto"><br>
+                                <p>
+                                  <strong>¿Las vacunas COVID-19 pueden causar enfermedad?</strong><br><br>
+                                  Las vacunas COVID-19 no pueden provocar la enfermedad dado que son vacunas inactivadas, lo que hacen es generar una respuesta inmune frente al virus. <br><br><br>
+                                  <strong>¿Cuáles son las vacunas COVID-19 autorizadas en Chile y sus principales características?</strong><br><br>
+                                  <div class="calendario01 mx-auto">
+                                    <img src='{% static "app_gestion/img/ImgPrRes.png" %}' alt="" width="540px">
+                                  </div> <br><br><br>
+                                  <strong>¿La vacuna contra el COVID – 19 es gratis?</strong><br><br>
+                                  Sí, la vacuna y el procedimiento de administración es gratuito para todos los grupos objetivos definidos. <br><br><br>
+                                  <strong>¿Cuánto tiempos se tarda en adquirir la inmunidad después de recibir la vacuna?</strong><br><br>
+                                  Cada persona puede responder de forma diferente frente a las vacunas, dependiendo de factores como la edad y el sistema inmunológico, sin embargo, en general, las personas estarán protegidas dos semanas después de la segunda dosis de la vacuna o dosis única. <br><br><br>
+                                  <strong>¿La vacuna es obligatoria?</strong><br><br>
+                                  La vacuna es voluntaria y es altamente recomendable vacunarse.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div> <br><br>
+        </div>
+      </div>
+    </section>
+
+  <!--FOOTER-->
+  <footer style="background: linear-gradient(0deg, rgba(8, 32, 50, 0.9), rgba(8, 32, 50, 0.9))"> <br>
+    <div class="container text-center text-md-left">
+      <div class="row text-center text-md-left">
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h4 style="color: white;">Vacunación covid-19 | Región del Maule</h4>
+        </div>
+      </div>
+    </div> <br>
+    <div class="col-md-12 col-lg-12">
+      <div class="text-center text-md-right">
+        <ul class="list-untyled list-inline">
+          <li class="list-inline-item">
+            <a href="https://www.facebook.com/ministeriosaludchile?fref=ts" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://twitter.com/ministeriosalud" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.instagram.com/ministeriosalud/" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://www.youtube.com/user/ministeriosaludchile" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="fab fa-youtube"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div style="color: #fff;
+                text-align: center;
+                font-family: 'Merriweather', serif;">
+        <h6>Telefono de contacto: (+56 2) 2 5740 100</h6>
+        <h6>Correo: minsal@mevacuno.cl</h6>
+    </div>
+    <hr class="mb-4">
+    <div class="footer-bottom text-center">
+        <p class="mb-0" style="color: #97a5b5;">Dirección: 1 Ote. 940, Talca, Maule</p>
+    </div>
+  </footer>
+
+  <!--MODAL Registro vacuna-->
+  <div class="modal fade" id="ModalRegistro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <div class="container-fluid">
+                    <div class="row gy-4">
+                      <div class="col-lg-4 col-sm-12 bg-cover">
+                        <img src='{% static "app_gestion/img/RegistroImg.jpg" %}' class="img-fluid" alt="" style="min-height: 575px;" > 
+                                <div>
+                                </div>
+                            </div>
+                        <div class="col-lg-8">
+                            <form class="p-lg-5 col-12 row g-3" action="/registrar_personas/" id="formulario" name="formulario" method="POST">{% csrf_token %}  
+                                <div>
+                                    <h1>Registro de vacunados</h1>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label style="font-size: 20px;" for="" class="form-label">Rut</label>
+                                    <input type="text" class="form-control" placeholder="12345678-k" id="txt_rut" name="txt_rut" required>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label style="font-size: 20px;" for="" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" placeholder="Federico" id="txt_nombre" name="txt_nombre" required>
+                                </div>
+                                <div class="col-lg-6">
+                                    <label style="font-size: 20px;" for="" class="form-label">Apellido Paterno</label>
+                                    <input type="text" class="form-control" placeholder="Gonzáles" id="txt_appaterno" name="txt_appaterno" required>
+                                </div>
+                                <div class="col-lg-6">
+                                  <label style="font-size: 20px;" for="" class="form-label">Apellido Materno</label>
+                                  <input type="text" class="form-control" placeholder="Aravena" id="txt_apmaterno" name="txt_apmaterno" required>
+                                </div>
+                                <div class="col-lg-6">
+                                  <label style="font-size: 20px;" for="" class="form-label">Edad</label>
+                                  <input type="number" class="form-control" placeholder="34" id="nro_edad" name="nro_edad" min="0" max="100" required>
+                                </div>
+                                <div class="col-lg-3">
+                                  <label style="font-size: 20px;" for="" class="form-label">Vacunas</label>
+                                  <select class="form-select" id="slct_vacunas" name="slct_vacunas" required>
+                                    <option selected>Opciones</option>
+                                    <option value="Pfizer-BioNTech">Pfizer-BioNTech</option>
+                                    <option value="CoronaVac">CoronaVac</option>
+                                    <option value="AZD1222">AZD1222</option>
+                                    <option value="CanSino">CanSino</option>
+                                    <option value="mRNA 1273">mRNA 1273</option>
+                                    <option value="SPUTNIK V">SPUTNIK V</option>
+                                  </select>       
+                                </div>
+                                <!--<div class="col-lg-6">
+                                  <label style="font-size: 20px;" for="userName" class="form-label">Fecha</label>
+                                  <input type="date" class="form-control" id="dte_fecha" name="dte_fecha" required>
+                                </div>  -->            
+                                <div class="col-12">
+                                    <input style="font-size: 20px;" type="submit" class="btn btn-primary" value="Registrar" id="btn_registrar" onclick="javascript:void(validarRegistro())">
+                                    <input type="button" class="btn btn-danger" value="Limpiar" id="btn_limpiar" onclick="return limpiar();">
+                                </div>
+                            </form>
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+/*Nav*/
+.nav-item {
+    font-family: 'Rubik', sans-serif;
+    font-size: 21px;
+    color: #d4ecf4;
+}
+
+.navbar {
+    box-shadow: 0px 6px 30px 0px rgba(0,0,0,0.1);
+}
+
+/*Imagen Vacunación*/
+.ImagenVac {
+    display: flex;
+    justify-content: center;
+}
+
+.ImagenVac img {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/*Calendario*/
+.TituloIn {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    color: #042c3c;
+}
+
+.Texto p {
+    text-align: center;
+    font-family: 'Tiro Telugu', serif;
+    font-size: 20px;
+    color: #042c3c;
+}
+
+.calendario01 {
+    display: flex;
+    justify-content: center;
+}
+
+.calendario01 img {
+    width: 100%;
+}
+
