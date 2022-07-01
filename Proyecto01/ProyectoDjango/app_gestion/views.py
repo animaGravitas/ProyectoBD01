@@ -18,12 +18,12 @@ def eliminar(request):
 # Create your views here.
 
 def listar_personas(request):
-    datos = Persona.objects.all() 
-    contexto = {'listarPersonas':datos} 
-    return render(request, 'datos/listar.html', contexto)
+    personas = Persona.objects.all()
+    data = {'personas':personas}
+    return render(request, 'app_gestion/home.html', data)
 
 def registrar_personas(request):
-    rut = request.POST['txt_rut']
+    rut = request.POST['txt_rut'] 
     nombre = request.POST['txt_nombre']
     appaterno = request.POST['txt_appaterno']
     apmaterno = request.POST['txt_apmaterno']

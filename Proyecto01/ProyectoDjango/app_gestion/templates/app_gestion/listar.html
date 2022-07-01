@@ -71,8 +71,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% if listarPersonas %}
-                        {% for i in listarPersonas %}
+                        {% if personas %}
+                        {% for i in personas %}
                         <tr>
                             <td>{{ i.rut }}</td>
                             <td>{{ i.nombre }}</td>
@@ -80,6 +80,7 @@
                             <td>{{ i.apmaterno }}</td>
                             <td>{{ i.edad }}</td>
                             <td>{{ i.vacuna }}</td>
+                            <td>{{ i.fecha}}</td>
                             
                         </tr>
                         {% endfor %}  
